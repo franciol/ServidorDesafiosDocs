@@ -1,196 +1,725 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>API - Servidor de Desafios</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  <link href="../custom.css" rel="stylesheet" />
-  
-  <script>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://github.com/franciol/ServidorDesafiosDocs/api/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>API - Servidor de Desafios</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet">
+<link href="../css/theme.css" rel="stylesheet">
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet"/>
+<link href="../custom.css" rel="stylesheet"/>
+<script>
     // Current page data
     var mkdocs_page_name = "API";
     var mkdocs_page_input_path = "api.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/franciol/ServidorDesafiosDocs/api/";
   </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
-
+<script defer="" src="../js/jquery-2.1.1.min.js"></script>
+<script defer="" src="../js/modernizr-2.8.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</link></link></head>
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Servidor de Desafios</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href=".."> Servidor de Desafios</a>
+<div role="search">
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../alunos/">Aluno</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../professores/">Professor</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../desenvolvimento/">Guia de Desenvolvimento</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">API</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#adduserpy">adduser.py</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#desafiopy">desafio.py</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#softdespy">softdes.py</a>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Servidor de Desafios</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>API</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  
-  <hr/>
 </div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="servidor-de-desafios-api">Servidor de Desafios API</h1>
-<h4 id="adduserpy">adduser.py</h4>
-<p>Adiciona um novo usuário ao banco de dados <em>quiz.db</em> para cada usuário no arquivo <em>users.csv</em>.</p>
-<p><code>add_user(user, pwd, tipe)</code> -
-Adiciona um novo usuário ao <em>quiz.db</em>, faz commit das mudanças e fecha a conexão.</p>
-<h4 id="desafiopy">desafio.py</h4>
-<p>Arquivo a ser enviado ao sistema.</p>
-<p><code>desafio1(number)</code> - 
-Função que retorna o valor encontrado.</p>
-<h4 id="softdespy">softdes.py</h4>
-<p>Software desenvolvido pelo professor Raul Ikeda para a disciplina Design de Software como servidor de desafios. Considere este o algoritmo Python principal do Servidor de Desafios. 
-Abaixo estão listadas as funções disponíveis.</p>
-<p><code>lambda_handler(event, context)</code> - 
-Lida com o lambda. Dentro dela, há a função <code>not_equals(first, second)</code> que é utilizada para lidar com o lambda. Em condições normais de temperatura e pressão, você não deve utilizar esta função explicitamente.</p>
-<p><code>converteData(orig)</code> - 
-Função de conversão de datas para tradução. Em condições normais de temperatura e pressão, você não deve utilizar esta função explicitamente.</p>
-<p><code>get_quizer(user)</code> - 
-Pega todos os quizes de um usuário específico.</p>
-<p><code>get_user_quiz(user_id, quiz_id)</code> - 
-Pega um quiz específico de um usuário específico.</p>
-<p><code>set_user_quiz(userid, quizid, sent, answer, result)</code> - 
-Insere no banco de dados a solução enviada por um usuário para um quiz. </p>
-<p><code>get_quiz(id, user)</code> - 
-Pega o quiz de um usuário no banco de dados.</p>
-<p><code>set_info(pwd, user)</code> - 
-Estabelece ou atualiza a senha de login de um usuário no banco de dados.</p>
-<p><code>get_info(user)</code> - 
-Mostra os dados de um usuário que está no banco de dados.</p>
-<p><code>change(void)</code> - 
-Altera a senha de um usuário, solicitando a senha antiga, a senha nova e uma confirmação da senha nova. Realiza a alteração apenas se a senha antiga for correta e se a confirmação de senha corresponder à senha nova.</p>
-<p><code>logout(void)</code> - 
-Faz logout do usuário do sistema.</p>
-<p><code>get_password(username)</code> - 
-Invoca a função <code>get_info</code> com o parâmetro username.</p>
-<p><code>hash_pw(password)</code> - 
-Criptografa a senha do usuário.</p>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="../desenvolvimento/" class="btn btn-neutral" title="Guia de Desenvolvimento"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
+<div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../alunos/">Aluno</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../professores/">Professor</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../desenvolvimento/">Guia de Desenvolvimento</a>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal current" href="./">API</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#softdes">softdes</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.change">change()</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.converteData">converteData()</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.get_info">get_info()</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.get_password">get_password()</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.get_quiz">get_quiz()</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.get_quizes">get_quizes()</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.get_user_quiz">get_user_quiz()</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.hash_pw">hash_pw()</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.lambda_handler">lambda_handler()</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.logout">logout()</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.set_info">set_info()</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#softdes.set_user_quiz">set_user_quiz()</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="top navigation" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">Servidor de Desafios</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a href="..">Docs</a> »</li>
+<li>API</li>
+<li class="wy-breadcrumbs-aside">
+</li>
+</ul>
+<hr/>
+</div>
+<div role="main">
+<div class="section">
+<h1 id="servidor-de-desafios-api">Servidor de Desafios API</h1>
+<div class="doc doc-object doc-module">
+<h6 class="hidden-toc" href="#softdes" id="softdes" style="visibility: hidden; width: 0; height: 0;">
+</h6>
+<div class="doc doc-contents first">
+<p>Software desenvolvido pelo professor Raul Ikeda para a disciplina Design de Software como servidor de desafios. Considere este o algoritmo Python principal do Servidor de Desafios. Abaixo estão listadas as funções disponíveis.</p>
+<div class="doc doc-children">
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.change">
+<code class="highlight language-python">
+change<span class="p">()</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>change(void) - Altera a senha de um usuário, solicitando a senha antiga, a senha nova e uma confirmação da senha nova. Realiza a alteração apenas se a senha antiga for correta e se a confirmação de senha corresponder à senha nova.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/pass'</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">'GET'</span><span class="p">,</span> <span class="s1">'POST'</span><span class="p">])</span>
+<span class="nd">@auth</span><span class="o">.</span><span class="n">login_required</span>
+<span class="k">def</span> <span class="nf">change</span><span class="p">():</span>
+    <span class="sd">"""change(void) - Altera a senha de um usuário, solicitando a senha antiga, a senha nova e uma confirmação da senha nova. Realiza a alteração apenas se a senha antiga for correta e se a confirmação de senha corresponder à senha nova."""</span>
+    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">'POST'</span><span class="p">:</span>
+        <span class="n">velha</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">'old'</span><span class="p">]</span>
+        <span class="n">nova</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">'new'</span><span class="p">]</span>
+        <span class="n">repet</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">form</span><span class="p">[</span><span class="s1">'again'</span><span class="p">]</span>
 
-  <hr/>
+        <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s1">''</span>
+        <span class="k">if</span> <span class="n">nova</span> <span class="o">!=</span> <span class="n">repet</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s1">'As novas senhas nao batem'</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="k">elif</span> <span class="n">get_info</span><span class="p">(</span><span class="n">auth</span><span class="o">.</span><span class="n">username</span><span class="p">())</span> <span class="o">!=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">velha</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">():</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s1">'A senha antiga nao confere'</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">set_info</span><span class="p">(</span><span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">nova</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">(),</span> <span class="n">auth</span><span class="o">.</span><span class="n">username</span><span class="p">())</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="s1">'Senha alterada com sucesso'</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s1">''</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
 
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'index.html'</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="n">auth</span><span class="o">.</span><span class="n">username</span><span class="p">(),</span> <span class="n">challenges</span><span class="o">=</span><span class="n">get_quizes</span><span class="p">(</span><span class="n">auth</span><span class="o">.</span><span class="n">username</span><span class="p">()),</span> <span class="n">p</span><span class="o">=</span><span class="n">p</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="n">msg</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.converteData">
+<code class="highlight language-python">
+converteData<span class="p">(</span><span class="n">orig</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>converteData(orig) - Função de conversão de datas para tradução. Em condições normais de temperatura e pressão, você não deve utilizar esta função explicitamente.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>48
+49
+50</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">converteData</span><span class="p">(</span><span class="n">orig</span><span class="p">):</span>
+    <span class="sd">"""converteData(orig) - Função de conversão de datas para tradução. Em condições normais de temperatura e pressão, você não deve utilizar esta função explicitamente."""</span>
+    <span class="k">return</span> <span class="n">orig</span><span class="p">[</span><span class="mi">8</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span><span class="o">+</span><span class="s1">'/'</span><span class="o">+</span><span class="n">orig</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]</span><span class="o">+</span><span class="s1">'/'</span><span class="o">+</span><span class="n">orig</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">+</span><span class="s1">' '</span><span class="o">+</span><span class="n">orig</span><span class="p">[</span><span class="mi">11</span><span class="p">:</span><span class="mi">13</span><span class="p">]</span><span class="o">+</span><span class="s1">':'</span><span class="o">+</span><span class="n">orig</span><span class="p">[</span><span class="mi">14</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span><span class="o">+</span><span class="s1">':'</span><span class="o">+</span><span class="n">orig</span><span class="p">[</span><span class="mi">17</span><span class="p">:]</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.get_info">
+<code class="highlight language-python">
+get_info<span class="p">(</span><span class="n">user</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>get_info(user) - Mostra os dados de um usuário que está no banco de dados.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_info</span><span class="p">(</span><span class="n">user</span><span class="p">):</span>
+    <span class="sd">"""get_info(user) - Mostra os dados de um usuário que está no banco de dados."""</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DBNAME</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+        <span class="s2">"SELECT pass, type from USER where user = '</span><span class="si">{0}</span><span class="s2">'"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"SELECT pass, type from USER where user = '</span><span class="si">{0}</span><span class="s2">'"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user</span><span class="p">))</span>
+    <span class="n">info</span> <span class="o">=</span> <span class="p">[</span><span class="n">reg</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">reg</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()]</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">info</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.get_password">
+<code class="highlight language-python">
+get_password<span class="p">(</span><span class="n">username</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>get_password(username) - Invoca a função get_info com o parâmetro username.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>236
+237
+238
+239</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@auth</span><span class="o">.</span><span class="n">get_password</span>
+<span class="k">def</span> <span class="nf">get_password</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+    <span class="sd">"""get_password(username) - Invoca a função get_info com o parâmetro username."""</span>
+    <span class="k">return</span> <span class="n">get_info</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.get_quiz">
+<code class="highlight language-python">
+get_quiz<span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>get_quiz(id, user) - Pega o quiz de um usuário no banco de dados.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span> 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102
+103
+104</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_quiz</span><span class="p">(</span><span class="nb">id</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span>
+    <span class="sd">"""get_quiz(id, user) - Pega o quiz de um usuário no banco de dados."""</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DBNAME</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s1">'admin'</span> <span class="ow">or</span> <span class="n">user</span> <span class="o">==</span> <span class="s1">'fabioja'</span><span class="p">:</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+            <span class="s2">"SELECT id, release, expire, problem, tests, results, diagnosis, numb from QUIZ where id = </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">id</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT id, release, expire, problem, tests, results, diagnosis, numb from QUIZ where id = </span><span class="si">{0}</span><span class="s2"> and release &lt; '</span><span class="si">{1}</span><span class="s2">'"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="nb">id</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">"%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S"</span><span class="p">)))</span>
+    <span class="n">info</span> <span class="o">=</span> <span class="p">[</span><span class="n">reg</span> <span class="k">for</span> <span class="n">reg</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()]</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">info</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.get_quizes">
+<code class="highlight language-python">
+get_quizes<span class="p">(</span><span class="n">user</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>Pega todos os quizes de um usuário específico.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_quizes</span><span class="p">(</span><span class="n">user</span><span class="p">):</span>
+    <span class="sd">"""Pega todos os quizes de um usuário específico."""</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DBNAME</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">user</span> <span class="o">==</span> <span class="s1">'admin'</span> <span class="ow">or</span> <span class="n">user</span> <span class="o">==</span> <span class="s1">'fabioja'</span><span class="p">:</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT id, numb from QUIZ"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">"%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S"</span><span class="p">)))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"SELECT id, numb from QUIZ where release &lt; '</span><span class="si">{0}</span><span class="s2">'"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+            <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">"%Y-%m-</span><span class="si">%d</span><span class="s2"> %H:%M:%S"</span><span class="p">)))</span>
+    <span class="n">info</span> <span class="o">=</span> <span class="p">[</span><span class="n">reg</span> <span class="k">for</span> <span class="n">reg</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()]</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">info</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.get_user_quiz">
+<code class="highlight language-python">
+get_user_quiz<span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">quiz_id</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>get_user_quiz(user_id, quiz_id) - Pega um quiz específico de um usuário específico.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>68
+69
+70
+71
+72
+73
+74
+75
+76</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">get_user_quiz</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">quiz_id</span><span class="p">):</span>
+    <span class="sd">"""get_user_quiz(user_id, quiz_id) - Pega um quiz específico de um usuário específico."""</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DBNAME</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span>
+        <span class="s2">"SELECT sent,answer,result from USERQUIZ where userid = '</span><span class="si">{0}</span><span class="s2">' and quizid = </span><span class="si">{1}</span><span class="s2"> order by sent desc"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">quiz_id</span><span class="p">))</span>
+    <span class="n">info</span> <span class="o">=</span> <span class="p">[</span><span class="n">reg</span> <span class="k">for</span> <span class="n">reg</span> <span class="ow">in</span> <span class="n">cursor</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()]</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">info</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.hash_pw">
+<code class="highlight language-python">
+hash_pw<span class="p">(</span><span class="n">password</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>hash_pw(password) - Criptografa a senha do usuário.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>242
+243
+244
+245</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@auth</span><span class="o">.</span><span class="n">hash_password</span>
+<span class="k">def</span> <span class="nf">hash_pw</span><span class="p">(</span><span class="n">password</span><span class="p">):</span>
+    <span class="sd">"""hash_pw(password) - Criptografa a senha do usuário."""</span>
+    <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">password</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.lambda_handler">
+<code class="highlight language-python">
+lambda_handler<span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>lambda_handler(event, context) - Lida com o lambda. Dentro dela, há a função not_equals(first, second) que é utilizada para lidar com o lambda. Em condições normais de temperatura e pressão, você não deve utilizar esta função explicitamente.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">lambda_handler</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="sd">"""lambda_handler(event, context) - Lida com o lambda. Dentro dela, há a função not_equals(first, second) que é utilizada para lidar com o lambda. Em condições normais de temperatura e pressão, você não deve utilizar esta função explicitamente."""</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">json</span>
+        <span class="kn">import</span> <span class="nn">numbers</span>
+
+        <span class="k">def</span> <span class="nf">not_equals</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">second</span><span class="p">):</span>
+            <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">numbers</span><span class="o">.</span><span class="n">Number</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">second</span><span class="p">,</span> <span class="n">numbers</span><span class="o">.</span><span class="n">Number</span><span class="p">):</span>
+                <span class="k">return</span> <span class="nb">abs</span><span class="p">(</span><span class="n">first</span> <span class="o">-</span> <span class="n">second</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mf">1e-3</span>
+            <span class="k">return</span> <span class="n">first</span> <span class="o">!=</span> <span class="n">second</span>
+
+        <span class="c1"># TODO implement</span>
+        <span class="n">ndes</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">event</span><span class="p">[</span><span class="s1">'ndes'</span><span class="p">])</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">'code'</span><span class="p">]</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">'args'</span><span class="p">]</span>
+        <span class="n">resp</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">'resp'</span><span class="p">]</span>
+        <span class="n">diag</span> <span class="o">=</span> <span class="n">event</span><span class="p">[</span><span class="s1">'diag'</span><span class="p">]</span>
+        <span class="n">exec</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="nb">locals</span><span class="p">())</span>
+
+        <span class="n">test</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">args</span><span class="p">):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="s1">'desafio</span><span class="si">{0}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ndes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">locals</span><span class="p">():</span>
+                <span class="k">return</span> <span class="s2">"Nome da função inválido. Usar 'def desafio</span><span class="si">{0}</span><span class="s2">(...)'"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ndes</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">not_equals</span><span class="p">(</span><span class="nb">eval</span><span class="p">(</span><span class="s1">'desafio</span><span class="si">{0}</span><span class="s1">(*arg)'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">ndes</span><span class="p">)),</span> <span class="n">resp</span><span class="p">[</span><span class="n">index</span><span class="p">]):</span>
+                <span class="n">test</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">diag</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+
+        <span class="k">return</span> <span class="s2">" "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">test</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">"Função inválida."</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.logout">
+<code class="highlight language-python">
+logout<span class="p">()</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>logout(void) - Faz logout do usuário do sistema.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>230
+231
+232
+233</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">'/logout'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">logout</span><span class="p">():</span>
+    <span class="sd">"""logout(void) - Faz logout do usuário do sistema."""</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">'index.html'</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="s2">"Logout com sucesso"</span><span class="p">),</span> <span class="mi">401</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.set_info">
+<code class="highlight language-python">
+set_info<span class="p">(</span><span class="n">pwd</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>set_info(pwd, user) - Estabelece ou atualiza a senha de login de um usuário no banco de dados.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>107
+108
+109
+110
+111
+112
+113</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">set_info</span><span class="p">(</span><span class="n">pwd</span><span class="p">,</span> <span class="n">user</span><span class="p">):</span>
+    <span class="sd">"""set_info(pwd, user) - Estabelece ou atualiza a senha de login de um usuário no banco de dados."""</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DBNAME</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE USER set pass = ? where user = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">pwd</span><span class="p">,</span> <span class="n">user</span><span class="p">))</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+<div class="doc doc-object doc-function">
+<h2 class="doc doc-heading" id="softdes.set_user_quiz">
+<code class="highlight language-python">
+set_user_quiz<span class="p">(</span><span class="n">userid</span><span class="p">,</span> <span class="n">quizid</span><span class="p">,</span> <span class="n">sent</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span> </code>
+</h2>
+<div class="doc doc-contents">
+<p>set_user_quiz(userid, quizid, sent, answer, result) - Insere no banco de dados a solução enviada por um usuário para um quiz.</p>
+<details class="quote">
+<summary>Source code in <code>src/softdes.py</code></summary>
+<table class="highlighttable">
+<tr>
+<td class="linenos">
+<div class="linenodiv">
+<pre><span></span>79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89</pre>
+</div>
+</td>
+<td class="code">
+<div class="highlight">
+<pre><span></span><code><span class="k">def</span> <span class="nf">set_user_quiz</span><span class="p">(</span><span class="n">userid</span><span class="p">,</span> <span class="n">quizid</span><span class="p">,</span> <span class="n">sent</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+    <span class="sd">"""set_user_quiz(userid, quizid, sent, answer, result) - Insere no banco de dados a solução enviada por um usuário para um quiz."""</span>
+    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">DBNAME</span><span class="p">)</span>
+    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+    <span class="c1">#print("insert into USERQUIZ(userid,quizid,sent,answer,result) values ('{0}',{1},'{2}','{3}','{4}');".format(userid, quizid, sent, answer, result))</span>
+    <span class="c1">#cursor.execute("insert into USERQUIZ(userid,quizid,sent,answer,result) values ('{0}',{1},'{2}','{3}','{4}');".format(userid, quizid, sent, answer, result))</span>
+    <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"insert into USERQUIZ(userid,quizid,sent,answer,result) values (?,?,?,?,?);"</span><span class="p">,</span>
+                   <span class="p">(</span><span class="n">userid</span><span class="p">,</span> <span class="n">quizid</span><span class="p">,</span> <span class="n">sent</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="n">result</span><span class="p">))</span>
+    <span class="c1">#</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre>
+</div>
+</td>
+</tr>
+</table>
+</details>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral" href="../desenvolvimento/" title="Guia de Desenvolvimento"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../desenvolvimento/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-    </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
+</div>
+</section>
+</div>
+<div aria-label="versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span><a href="../desenvolvimento/" style="color: #fcfcfc;">« Previous</a></span>
+</span>
+</div>
+<script>var base_url = '..';</script>
+<script defer="" src="../js/theme.js"></script>
+<script defer="" src="../search/main.js"></script>
+<script defer="">
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
         };
     </script>
-
 </body>
 </html>

@@ -1,124 +1,103 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Guia de Desenvolvimento - Servidor de Desafios</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  <link href="../custom.css" rel="stylesheet" />
-  
-  <script>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://github.com/franciol/ServidorDesafiosDocs/desenvolvimento/" rel="canonical"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<title>Guia de Desenvolvimento - Servidor de Desafios</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet">
+<link href="../css/theme.css" rel="stylesheet">
+<link href="../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet"/>
+<link href="../custom.css" rel="stylesheet"/>
+<script>
     // Current page data
     var mkdocs_page_name = "Guia de Desenvolvimento";
     var mkdocs_page_input_path = "desenvolvimento.md";
-    var mkdocs_page_url = null;
+    var mkdocs_page_url = "/franciol/ServidorDesafiosDocs/desenvolvimento/";
   </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
-
+<script defer="" src="../js/jquery-2.1.1.min.js"></script>
+<script defer="" src="../js/modernizr-2.8.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</link></link></head>
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Servidor de Desafios</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href=".."> Servidor de Desafios</a>
+<div role="search">
+<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../alunos/">Aluno</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../professores/">Professor</a>
-                    </li>
-                </ul>
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Guia de Desenvolvimento</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#configurando-o-ambiente-de-desenvolvimento">Configurando o ambiente de desenvolvimento</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#instalando-as-dependencias">Instalando as dependências</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#instalando-o-software">Instalando o software</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#configurando-o-banco-de-dados">Configurando o banco de dados</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#rodando-o-servidor">Rodando o servidor</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#estrutura-do-codigo">Estrutura do Código</a>
-    </li>
-    </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../api/">API</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Servidor de Desafios</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Guia de Desenvolvimento</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  
-  <hr/>
 </div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="guia-de-desenvolvimento">Guia de Desenvolvimento</h1>
+<div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../alunos/">Aluno</a>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../professores/">Professor</a>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal current" href="./">Guia de Desenvolvimento</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#configurando-o-ambiente-de-desenvolvimento">Configurando o ambiente de desenvolvimento</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#instalando-as-dependencias">Instalando as dependências</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#instalando-o-software">Instalando o software</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#configurando-o-banco-de-dados">Configurando o banco de dados</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#rodando-o-servidor">Rodando o servidor</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estrutura-do-codigo">Estrutura do Código</a>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/">API</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="top navigation" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="..">Servidor de Desafios</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a href="..">Docs</a> »</li>
+<li>Guia de Desenvolvimento</li>
+<li class="wy-breadcrumbs-aside">
+</li>
+</ul>
+<hr/>
+</div>
+<div role="main">
+<div class="section">
+<h1 id="guia-de-desenvolvimento">Guia de Desenvolvimento</h1>
 <h2 id="configurando-o-ambiente-de-desenvolvimento">Configurando o ambiente de desenvolvimento</h2>
 <h4 id="instalando-as-dependencias">Instalando as dependências</h4>
 <ul>
@@ -143,14 +122,12 @@
 </ul>
 <pre><code class="bash">sqlite3 quiz.db &lt; quiz.sql
 </code></pre>
-
 <h4 id="rodando-o-servidor">Rodando o servidor</h4>
 <ul>
 <li>Rode o arquivo <strong>softdes.py</strong> com o comando a seguir no terminal:</li>
 </ul>
 <pre><code class="bash">python3 softdes.py
 </code></pre>
-
 <p>Abra um navegador e siga para <a href="http://0.0.0.0:80/">este endereço</a>.</p>
 <h2 id="estrutura-do-codigo">Estrutura do Código</h2>
 <p>O código desse software se encontra dividido em 2 arquivos python.</p>
@@ -159,57 +136,37 @@
 <p>No arquivo <strong>quiz.sql</strong>, se encontra a estrutura do banco de dados da aplicação.</p>
 <p>No arquivo <strong>user.sql</strong>, se encontra a estrutura do banco de dados do usuário.</p>
 <p>O arquivo <strong>desafio.py</strong> é a resposta de um exemplo de um desafio do software.</p>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../api/" class="btn btn-neutral float-right" title="API">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../professores/" class="btn btn-neutral" title="Professor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
+</div>
+</div>
+<footer>
+<div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-right" href="../api/" title="API">Next <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral" href="../professores/" title="Professor"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../professores/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../api/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
+</div>
+</section>
+</div>
+<div aria-label="versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span><a href="../professores/" style="color: #fcfcfc;">« Previous</a></span>
+<span style="margin-left: 15px"><a href="../api/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script>var base_url = '..';</script>
+<script defer="" src="../js/theme.js"></script>
+<script defer="" src="../search/main.js"></script>
+<script defer="">
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
         };
     </script>
-
 </body>
 </html>
