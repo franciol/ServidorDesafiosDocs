@@ -1,4 +1,19 @@
+site_url: https://github.com/franciol/ServidorDesafiosDocs
 site_name: Servidor de Desafios
+
+theme:
+  name: "material"
+
+plugins:
+  - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          rendering:
+            show_source: true
+      watch:
+        - src/my_library
 
 nav: 
   - Home: index.md
